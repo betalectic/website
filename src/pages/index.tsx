@@ -43,6 +43,7 @@ export default function Home(): JSX.Element {
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
+      <h1>Added a text to see PR Preview</h1>
       <main>
         <HomepageFeatures />
       </main>
