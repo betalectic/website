@@ -1,4 +1,3 @@
-# .github/workflows/preview.yml
 name: Deploy PR previews
 
 on:
@@ -31,15 +30,19 @@ jobs:
           preview-branch: main
           umbrella-dir: pr-preview
           action: auto
-      - uses: rossjrw/pr-preview-action@v1
-        if: contains(['opened', 'reopened', 'synchronize'], github.event.action)
+
+      - name: Deploy PR Preview
+        if: github.event.action in 'opened,reopened,synchronize'
+        uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./build/
           preview-branch: main
           umbrella-dir: pr-preview
           action: deploy
-      - uses: rossjrw/pr-preview-action@v1
-        if: github.event.action == "closed" && !github.event.pull_request.merged
+
+      - name: Remove PR Preview
+        if: github.event.action == 'closed' && github.event.pull_request.merged == false
+        uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./build/
           preview-branch: main
