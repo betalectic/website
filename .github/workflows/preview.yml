@@ -24,6 +24,7 @@ jobs:
           npm run build
 
       - name: Deploy preview
+        if: github.event.action != 'closed'
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./build/
@@ -32,7 +33,7 @@ jobs:
           action: auto
 
       - name: Deploy PR Preview
-        if: github.event.action in 'opened,reopened,synchronize'
+        if: github.event.action == 'opened' || github.event.action == 'reopened' || github.event.action == 'synchronize'
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./build/
