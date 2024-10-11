@@ -18,7 +18,7 @@ function HomepageHeader() {
 
         {/* The following should use tailwind classes, and dark mode should work */}
         <h1 className="bg-blue-400 p-2 text-xl dark:bg-red-400">
-          Tailwind Content
+          pR Preview COntent
         </h1>
 
         <p className="hero__subtitle">{siteConfig.tagline}</p>
