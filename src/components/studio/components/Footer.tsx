@@ -1,57 +1,70 @@
-import Link from 'next/link'
+import Link from "@docusaurus/Link";
 
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { Logo } from '@/components/Logo'
-import { socialMediaProfiles } from '@/components/SocialMedia'
+// import { Container } from "@/components/Container";
+// import { FadeIn } from "@/components/FadeIn";
+// import { Logo } from "@/components/Logo";
+// import { socialMediaProfiles } from "@/components/SocialMedia";
+
+import { Container } from "./Container";
+import { FadeIn } from "./FadeIn";
+import { socialMediaProfiles } from "./SocialMedia";
+import { Logo } from "./Logo";
 
 const navigation = [
   {
-    title: 'Work',
+    title: "Work",
     links: [
-      { title: 'FamilyFund', href: '/work/family-fund' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
+      { title: "FamilyFund", href: "/work/family-fund" },
+      { title: "Unseal", href: "/work/unseal" },
+      { title: "Phobia", href: "/work/phobia" },
       {
         title: (
           <>
             See all <span aria-hidden="true">&rarr;</span>
           </>
         ),
-        href: '/work',
+        href: "/work",
       },
     ],
   },
   {
-    title: 'Company',
+    title: "Company",
     links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
+      { title: "About", href: "/about" },
+      { title: "Process", href: "/process" },
+      { title: "Blog", href: "/blog" },
+      { title: "Contact us", href: "/contact" },
     ],
   },
   {
-    title: 'Connect',
+    title: "Connect",
     links: socialMediaProfiles,
   },
-]
+];
 
 function Navigation() {
   return (
     <nav>
-      <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+      <ul
+        role="list"
+        className="grid grid-cols-2 gap-8 sm:grid-cols-3 m-0 p-0"
+        style={{ listStyle: "none" }}
+      >
         {navigation.map((section, sectionIndex) => (
-          <li key={sectionIndex}>
+          <li key={sectionIndex} style={{ listStyle: "none" }}>
             <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
               {section.title}
             </div>
-            <ul role="list" className="mt-4 text-sm text-neutral-700">
+            <ul
+              role="list"
+              className="mt-4 text-sm text-neutral-700 m-0 p-0"
+              style={{ listStyle: "none" }}
+            >
               {section.links.map((link, linkIndex) => (
                 <li key={linkIndex} className="mt-4">
                   <Link
                     href={link.href}
-                    className="transition hover:text-neutral-950"
+                    className="transition hover:text-neutral-950 no-underline"
                   >
                     {link.title}
                   </Link>
@@ -62,10 +75,10 @@ function Navigation() {
         ))}
       </ul>
     </nav>
-  )
+  );
 }
 
-function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function ArrowIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 16 6" aria-hidden="true" {...props}>
       <path
@@ -75,7 +88,7 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         d="M16 3 10 .5v2H0v1h10v2L16 3Z"
       />
     </svg>
-  )
+  );
 }
 
 function NewsletterForm() {
@@ -107,7 +120,7 @@ function NewsletterForm() {
         </div>
       </div>
     </form>
-  )
+  );
 }
 
 export function Footer() {
@@ -116,9 +129,7 @@ export function Footer() {
       <FadeIn>
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
           <Navigation />
-          <div className="flex lg:justify-end">
-            <NewsletterForm />
-          </div>
+          <div className="flex lg:justify-end">{/* <NewsletterForm /> */}</div>
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
@@ -130,5 +141,5 @@ export function Footer() {
         </div>
       </FadeIn>
     </Container>
-  )
+  );
 }

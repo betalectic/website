@@ -5,6 +5,7 @@ import defaultTheme from "tailwindcss/defaultTheme";
 module.exports = {
   content: ["./src/**/*.html", "./src/**/*.js", "./src/**/*.tsx"],
   corePlugins: { preflight: false },
+  // important: "#tailwind_preflight",
   darkMode: ["class", '[data-theme="dark"]'],
   theme: {
     fontSize: {

@@ -2,12 +2,14 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import { GridPattern } from "../components/GridPattern";
+// import { GridPattern } from "../components/GridPattern";
+// GridPattern;
 import { motion, MotionConfig, useReducedMotion } from "framer-motion";
 import { Container } from "../components/studio/components/Container";
 import { FadeIn, FadeInStagger } from "../components/studio/components/FadeIn";
 import { SectionIntro } from "../components/studio/components/SectionIntro";
 import { title } from "framer-motion/client";
+import { GridPattern } from "../components/studio/components/GridPattern";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -211,7 +213,7 @@ export default function Home(): JSX.Element {
             className="relative isolate flex w-full flex-col pt-9"
           >
             <GridPattern
-              className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+              className="absolute inset-x-0 -top-24 -z-10 h-[1000px] w-full fill-neutral-50  stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
               yOffset={-96}
               interactive
             />
@@ -219,10 +221,10 @@ export default function Home(): JSX.Element {
             <main>
               <Container className="mt-12 sm:mt-20 md:mt-40">
                 <FadeIn className="max-w-3xl">
-                  <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+                  <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 dark:text-gray-50 [text-wrap:balance] sm:text-7xl">
                     Award-winning development studio based in Denmark.
                   </h1>
-                  <p className="mt-6 text-xl text-neutral-600">
+                  <p className="mt-6 text-xl text-neutral-600 dark:text-neutral-300">
                     We are a development studio working at the intersection of
                     design and technology. It’s a really busy intersection
                     though — a lot of our staff have been involved in hit and

@@ -76,6 +76,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/betalectic_logo.png",
     navbar: {
+      hideOnScroll: true,
       logo: {
         alt: "My Site Logo",
         src: "img/betalectic_logo.png",
