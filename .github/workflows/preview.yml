@@ -1,3 +1,4 @@
+# .github/workflows/preview.yml
 name: Deploy PR previews
 
 on:
@@ -12,31 +13,21 @@ concurrency: preview-${{ github.ref }}
 
 jobs:
   deploy-preview:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install and Build
 
-      - name: Build Docusaurus
-        run: npm run build
+        if: github.event.action != 'closed'
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          npm install
+          npm run build
 
       - name: Deploy preview
-        if: github.event.action != 'closed'
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./build/
-          preview-branch: main
-          umbrella-dir: pr-preview
-          action: deploy
-
-      - name: Remove PR Preview
-        if: github.event.action == 'closed' && !github.event.pull_request.merged
-        uses: rossjrw/pr-preview-action@v1
-        with:
-          source-dir: ./build/
-          preview-branch: main
-          umbrella-dir: pr-preview
-          action: remove
