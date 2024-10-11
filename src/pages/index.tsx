@@ -22,7 +22,7 @@ function HomepageHeader() {
           ></div>
         </div>
 
-        <div className="max-w-xl py-32 sm:py-40 lg:py-48">
+        <div className="max-w-xl py-16 sm:py-36">
           <div className="">
             <h1 className="text-5xl md:text-6xl lg:text-8xl py-3">
               {siteConfig.title}
