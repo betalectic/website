@@ -9,8 +9,8 @@ const BASE_URL =
 
 const config: Config = {
   title: "Betalectic",
-  tagline: "Dinosaurs are cool",
-  favicon: "img/favicon.ico",
+  tagline: "Some tagline to keep things simple",
+  favicon: "img/favicon_betalectic.png",
 
   // Set the production url of your site here
   url: "https://github.com",
@@ -21,7 +21,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "Betalectic", // Usually your GitHub org/user name.
-  projectName: "Website", // Usually your repo name.
+  projectName: "betalectic", // Usually your repo name.
   deploymentBranch: "main",
   trailingSlash: false,
   onBrokenLinks: "throw",
@@ -43,10 +43,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
@@ -54,10 +50,6 @@ const config: Config = {
             type: ["rss", "atom"],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -72,26 +64,16 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/betalectic_logo.png",
     navbar: {
-      title: "My Site",
       logo: {
         alt: "My Site Logo",
-        src: "img/logo.svg",
+        src: "img/betalectic_logo.png",
+        href: "/",
       },
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Tutorial",
-        },
-        { to: "/blog", label: "Blog", position: "left" },
-        {
-          href: "https://github.com/facebook/docusaurus",
-          label: "GitHub",
-          position: "right",
-        },
+        { to: "/about", label: "About Us", position: "right" },
+        { to: "/contact", label: "Contact", position: "right" },
       ],
     },
     footer: {
@@ -99,45 +81,27 @@ const config: Config = {
       links: [
         {
           title: "Docs",
-          items: [
-            {
-              label: "Tutorial",
-              to: "/docs/intro",
-            },
-          ],
+          items: [],
         },
         {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/company/betalectic/",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              href: "https://x.com/betalectic/",
             },
           ],
         },
         {
           title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
-            },
-          ],
+          items: [],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Betalectic.`,
     },
     prism: {
       theme: prismThemes.github,
