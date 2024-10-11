@@ -8,6 +8,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+}
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;

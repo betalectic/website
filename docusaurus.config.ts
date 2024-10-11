@@ -62,6 +62,16 @@ const config: Config = {
     ],
   ],
 
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap", // Adjust weights as needed
+      },
+    },
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: "img/betalectic_logo.png",
@@ -97,8 +107,13 @@ const config: Config = {
           ],
         },
         {
-          title: "More",
-          items: [],
+          title: "Contact us",
+          items: [
+            {
+              label: "Email",
+              href: "mailto:contact@betalectic.com",
+            },
+          ],
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Betalectic.`,
