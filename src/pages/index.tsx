@@ -11,7 +11,7 @@ function HomepageHeader() {
   return (
     <header className="container max-w-7xl py-10">
       <div className="relative isolate px-6 lg:px-8">
-        <div className="absolute inset-x-0 top-0 -z-100 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
+        <div className="absolute inset-x-0 top-0 -z-100 h-[630px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
           <MotionConfig reducedMotion="user">
             <motion.div
               layout
