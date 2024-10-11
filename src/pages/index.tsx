@@ -16,20 +16,7 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
 
-        {/* The following should use tailwind classes, and dark mode should work */}
-        <h1 className="bg-blue-400 p-2 text-xl dark:bg-red-400">
-          Tailwind Content in PR Preview Package
-        </h1>
-
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
-          >
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
       </div>
     </header>
   );
@@ -39,7 +26,7 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
