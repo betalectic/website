@@ -41,9 +41,7 @@ const config: Config = {
     [
       "classic",
       {
-        docs: {
-          sidebarPath: "./sidebars.ts",
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -83,6 +81,7 @@ const config: Config = {
         href: "/",
       },
       items: [
+        { to: "/blog", label: "Blog", position: "right" },
         { to: "/about", label: "About Us", position: "right" },
         { to: "/contact", label: "Contact", position: "right" },
       ],

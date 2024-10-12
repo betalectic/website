@@ -52,10 +52,13 @@ function DribbbleIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 }
 
 export const socialMediaProfiles = [
-  { title: "Facebook", href: "https://facebook.com", icon: FacebookIcon },
-  { title: "Instagram", href: "https://instagram.com", icon: InstagramIcon },
+  {
+    title: "Linkedin",
+    href: "https://linkedin.com/company/betalectic/",
+  },
+  { title: "X", href: "https://x.com/betalectic/", icon: InstagramIcon },
   { title: "GitHub", href: "https://github.com", icon: GitHubIcon },
-  { title: "Dribbble", href: "https://dribbble.com", icon: DribbbleIcon },
+  { title: "Email", href: "mailto:contact@betalectic.com", icon: DribbbleIcon },
 ];
 
 export function SocialMedia({
@@ -83,9 +86,7 @@ export function SocialMedia({
               "transition",
               invert ? "hover:text-neutral-200" : "hover:text-neutral-700"
             )}
-          >
-            <socialMediaProfile.icon className="h-6 w-6 fill-current" />
-          </Link>
+          ></Link>
         </li>
       ))}
     </ul>
