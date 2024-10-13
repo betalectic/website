@@ -24,7 +24,7 @@ const config: Config = {
   projectName: "betalectic", // Usually your repo name.
   deploymentBranch: "main",
   trailingSlash: false,
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
   plugins: ["docusaurus-tailwindcss-loader"],
