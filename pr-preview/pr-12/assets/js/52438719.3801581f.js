@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbetalectic_website=self.webpackChunkbetalectic_website||[]).push([[516],{8100:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/pr-preview/pr-12/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
