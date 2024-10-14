@@ -1,24 +1,24 @@
-import Image, { type ImageProps } from 'next/image'
-import clsx from 'clsx'
+// import Image, { type ImageProps } from 'next/image'
+import clsx from "clsx";
 
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { GridPattern } from '@/components/GridPattern'
+import { Container } from "./Container";
+import { FadeIn } from "./FadeIn";
+import { GridPattern } from "./GridPattern";
 
 export function Testimonial({
   children,
   client,
   className,
 }: {
-  children: React.ReactNode
-  client: { logo: ImageProps['src']; name: string }
-  className?: string
+  children: React.ReactNode;
+  client: { logo: string; name: string };
+  className?: string;
 }) {
   return (
     <div
       className={clsx(
-        'relative isolate bg-neutral-50 py-16 sm:py-28 md:py-32',
-        className,
+        "relative isolate bg-neutral-50 dark:bg-neutral-900 py-16 sm:py-28 md:py-32",
+        className
       )}
     >
       <GridPattern
@@ -28,17 +28,18 @@ export function Testimonial({
       <Container>
         <FadeIn>
           <figure className="mx-auto max-w-4xl">
-            <blockquote className="relative font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+            <blockquote className="relative font-display text-3xl font-medium tracking-tight text-neutral-950 dark:text-neutral-50 sm:text-4xl border-l-0">
               <p className="before:content-['“'] after:content-['”'] sm:before:absolute sm:before:right-full">
                 {children}
               </p>
             </blockquote>
-            <figcaption className="mt-10">
-              <Image src={client.logo} alt={client.name} unoptimized />
+            <figcaption className="mt-10 flex">
+              <img src={client.logo} alt={client.name} className="w-16 h-16" />
+              <p className="my-auto text-xl font-bold">{client.name}</p>
             </figcaption>
           </figure>
         </FadeIn>
       </Container>
     </div>
-  )
+  );
 }

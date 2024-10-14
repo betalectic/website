@@ -4,12 +4,16 @@ import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 // import { GridPattern } from "../components/GridPattern";
 // GridPattern;
+import { List, ListItem } from "../components/studio/components/List";
+import { StylizedImage } from "../components/studio/components/StylizedImage";
 import { motion, MotionConfig, useReducedMotion } from "framer-motion";
 import { Container } from "../components/studio/components/Container";
 import { FadeIn, FadeInStagger } from "../components/studio/components/FadeIn";
 import { SectionIntro } from "../components/studio/components/SectionIntro";
 import { title } from "framer-motion/client";
 import { GridPattern } from "../components/studio/components/GridPattern";
+import { Testimonial } from "../components/studio/components/Testimonial";
+import { ContactSection } from "../components/studio/components/ContactSection";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -138,57 +142,6 @@ function CaseStudies({ caseStudies }: any) {
   );
 }
 
-// function Services() {
-//   return (
-//     <>
-//       <SectionIntro
-//         eyebrow="Services"
-//         title="We help you identify, explore and respond to new opportunities."
-//         className="mt-24 sm:mt-32 lg:mt-40"
-//       >
-//         <p>
-//           As long as those opportunities involve giving us money to re-purpose
-//           old projects — we can come up with an endless number of those.
-//         </p>
-//       </SectionIntro>
-//       <Container className="mt-16">
-//         <div className="lg:flex lg:items-center lg:justify-end">
-//           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-//             <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
-//               <StylizedImage
-//                 src={imageLaptop}
-//                 sizes="(min-width: 1024px) 41rem, 31rem"
-//                 className="justify-center lg:justify-end"
-//               />
-//             </FadeIn>
-//           </div>
-//           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-//             <ListItem title="Web development">
-//               We specialise in crafting beautiful, high quality marketing pages.
-//               The rest of the website will be a shell that uses lorem ipsum
-//               everywhere.
-//             </ListItem>
-//             <ListItem title="Application development">
-//               We have a team of skilled developers who are experts in the latest
-//               app frameworks, like Angular 1 and Google Web Toolkit.
-//             </ListItem>
-//             <ListItem title="E-commerce">
-//               We are at the forefront of modern e-commerce development. Which
-//               mainly means adding your logo to the Shopify store template we’ve
-//               used for the past six years.
-//             </ListItem>
-//             <ListItem title="Custom content management">
-//               At Studio we understand the importance of having a robust and
-//               customised CMS. That’s why we run all of our client projects out
-//               of a single, enormous Joomla instance.
-//             </ListItem>
-//           </List>
-//         </div>
-//       </Container>
-//     </>
-//   );
-// }
-
 const clients = [
   ["Phobia"],
   ["Family Fund"],
@@ -238,6 +191,57 @@ function Clients() {
         </FadeInStagger>
       </Container>
     </div>
+  );
+}
+
+function Services() {
+  return (
+    <>
+      <SectionIntro
+        eyebrow="Services"
+        title="We help you identify, explore and respond to new opportunities."
+        className="mt-24 sm:mt-32 lg:mt-40"
+      >
+        <p className="text-neutral-700 dark:text-neutral-300">
+          As long as those opportunities involve giving us money to re-purpose
+          old projects — we can come up with an endless number of those.
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <div className="lg:flex lg:items-center lg:justify-end">
+          <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
+            <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+              <StylizedImage
+                src={require("@site/static/img/favicon_betalectic.png").default}
+                sizes="(min-width: 1024px) 41rem, 31rem"
+                className="justify-center lg:justify-end"
+              />
+            </FadeIn>
+          </div>
+          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] text-neutral-700 dark:text-neutral-300 lg:pl-4 list-none">
+            <ListItem title="Web development">
+              We specialise in crafting beautiful, high quality marketing pages.
+              The rest of the website will be a shell that uses lorem ipsum
+              everywhere.
+            </ListItem>
+            <ListItem title="Application development">
+              We have a team of skilled developers who are experts in the latest
+              app frameworks, like Angular 1 and Google Web Toolkit.
+            </ListItem>
+            <ListItem title="E-commerce">
+              We are at the forefront of modern e-commerce development. Which
+              mainly means adding your logo to the Shopify store template we’ve
+              used for the past six years.
+            </ListItem>
+            <ListItem title="Custom content management">
+              At Studio we understand the importance of having a robust and
+              customised CMS. That’s why we run all of our client projects out
+              of a single, enormous Joomla instance.
+            </ListItem>
+          </List>
+        </div>
+      </Container>
+    </>
   );
 }
 
@@ -316,6 +320,21 @@ export default function Home(): JSX.Element {
                   },
                 ]}
               />
+
+              <Testimonial
+                className="mt-24 sm:mt-32 lg:mt-40"
+                client={{
+                  name: "Betalectic",
+                  logo: require("@site/static/img/favicon_betalectic.png")
+                    .default,
+                }}
+              >
+                The team at Studio went above and beyond with our onboarding,
+                even finding a way to access the user’s microphone without
+                triggering one of those annoying permission dialogs.
+              </Testimonial>
+              <Services />
+              <ContactSection />
             </main>
           </motion.div>
         </motion.div>

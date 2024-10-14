@@ -1,7 +1,7 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { Offices } from '@/components/Offices'
+import { Button } from "./Button";
+import { Container } from "./Container";
+import { FadeIn } from "./FadeIn";
+import { Offices } from "./Offices";
 
 export function ContactSection() {
   return (
@@ -30,5 +30,5 @@ export function ContactSection() {
         </div>
       </FadeIn>
     </Container>
-  )
+  );
 }
