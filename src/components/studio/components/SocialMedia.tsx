@@ -78,7 +78,7 @@ export function SocialMedia({
       )}
     >
       {socialMediaProfiles.map((socialMediaProfile) => (
-        <li key={socialMediaProfile.title}>
+        <li key={socialMediaProfile.title} className="list-none">
           <Link
             href={socialMediaProfile.href}
             aria-label={socialMediaProfile.title}
