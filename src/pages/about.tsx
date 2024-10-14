@@ -24,7 +24,7 @@ export default function About() {
           invert
         >
           <p>
-            We are group of like-minded people who share the same core values.
+            We are a group of like-minded people who share the same core values.
           </p>
         </SectionIntro>
         <Container className="mt-16">
