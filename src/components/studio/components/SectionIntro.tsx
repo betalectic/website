@@ -25,13 +25,12 @@ export function SectionIntro({
   return (
     <Container {...props}>
       <FadeIn className="max-w-2xl">
-        <h2>
+        <h2 className="text-neutral-900 dark:text-neutral-50">
           {eyebrow && (
             <>
               <span
                 className={clsx(
-                  "mb-6 block font-display text-base font-semibold",
-                  invert ? "text-white" : "text-neutral-950"
+                  "mb-6 block font-display text-base font-semibold text-neutral-900 dark:text-neutral-50"
                 )}
               >
                 {eyebrow}
