@@ -1,63 +1,173 @@
 import Link from "@docusaurus/Link";
 import Layout from "@theme/Layout";
+import { useId } from "react";
+import { PageIntro } from "../components/studio/components/PageIntro";
+import { Container } from "../components/studio/components/Container";
+import { FadeIn } from "../components/studio/components/FadeIn";
+import { Button } from "../components/studio/components/Button";
+import { Border } from "../components/studio/components/Border";
+import { Offices } from "../components/studio/components/Offices";
+import { SocialMedia } from "../components/studio/components/SocialMedia";
 
 export default function Contact() {
-  return (
-    <Layout title="Contact" description="Contact Betalectic">
-      <div className="container py-28">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex flex-col justify-center">
-            <h1>Get in Touch with Us</h1>
-            <p>
-              How can we help you? Leave your contact details and we will get
-              back to you..
-            </p>
-            <div className="flex gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="size-12"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
-                />
-              </svg>
+  function TextInput({
+    label,
+    ...props
+  }: React.ComponentPropsWithoutRef<"input"> & { label: string }) {
+    let id = useId();
 
-              <p className="font-bold my-auto">
-                3rd Floor, Mitti’s Building, Near Divyashree Lanco Hills,
-                Chaitanya Enclave, Manikonda, Hyderabad, Telangana - 500089
-              </p>
+    return (
+      <div className="group relative z-0 transition-all focus-within:z-10">
+        <input
+          type="text"
+          id={id}
+          {...props}
+          placeholder=" "
+          className="peer block w-full border border-neutral-300 dark:border-neutral-600 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 dark:text-neutral-50 ring-4 ring-transparent transition focus:border-neutral-950 dark:focus:border-neutral-50 focus:outline-none focus:ring-neutral-950/5 dark:focus:ring-neutral-50/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+        />
+        <label
+          htmlFor={id}
+          className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 dark:text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 dark:peer-focus:text-neutral-50 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950 dark:peer-[:not(:placeholder-shown)]:text-neutral-50"
+        >
+          {label}
+        </label>
+      </div>
+    );
+  }
+  function RadioInput({
+    label,
+    ...props
+  }: React.ComponentPropsWithoutRef<"input"> & { label: string }) {
+    return (
+      <label className="flex gap-x-3">
+        <input
+          type="radio"
+          {...props}
+          className="h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 dark:border-neutral-50 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
+        />
+        <span className="text-base/6 text-neutral-950 dark:text-neutral-50">
+          {label}
+        </span>
+      </label>
+    );
+  }
+  function ContactForm() {
+    return (
+      <FadeIn className="lg:order-last">
+        <form>
+          <h2 className="font-display text-base font-semibold text-neutral-950 dark:text-neutral-50">
+            Work inquiries
+          </h2>
+          <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50 dark:bg-black/50">
+            <TextInput label="Name" name="name" autoComplete="name" />
+            <TextInput
+              label="Email"
+              type="email"
+              name="email"
+              autoComplete="email"
+            />
+            <TextInput
+              label="Company"
+              name="company"
+              autoComplete="organization"
+            />
+            <TextInput
+              label="Phone"
+              type="tel"
+              name="phone"
+              autoComplete="tel"
+            />
+            <TextInput label="Message" name="message" />
+            <div className="border border-neutral-300 dark:border-neutral-600 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
+              <fieldset>
+                <legend className="text-base/6 text-neutral-500 dark:text-neutral-400">
+                  Budget
+                </legend>
+                <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
+                  <RadioInput label="$25K – $50K" name="budget" value="25" />
+                  <RadioInput label="$50K – $100K" name="budget" value="50" />
+                  <RadioInput label="$100K – $150K" name="budget" value="100" />
+                  <RadioInput
+                    label="More than $150K"
+                    name="budget"
+                    value="150"
+                  />
+                </div>
+              </fieldset>
             </div>
           </div>
-          <div className="flex gap-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="size-10"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"
-              />
-            </svg>
+          <Button
+            type="submit"
+            className="mt-10 bg-black text-white dark:bg-white dark:text-black"
+          >
+            Let’s work together
+          </Button>
+        </form>
+      </FadeIn>
+    );
+  }
 
-            <Link
-              className="font-bold my-auto"
-              href="mailto:contact@betalectic.com"
-            >
-              contact@betalectic.com
-            </Link>
+  function ContactDetails() {
+    return (
+      <FadeIn>
+        <h2 className="font-display text-base font-semibold text-neutral-950 dark:text-neutral-50">
+          Our offices
+        </h2>
+        <p className="mt-6 text-base text-neutral-600 dark:text-neutral-400">
+          Prefer doing things in person? We don’t but we have to list our
+          addresses here for legal reasons.
+        </p>
+
+        <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
+
+        <Border className="mt-16 pt-16">
+          <h2 className="font-display text-base font-semibold text-neutral-950 dark:text-neutral-50">
+            Email us
+          </h2>
+          <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
+            {[
+              ["Careers", "careers@studioagency.com"],
+              ["Press", "press@studioagency.com"],
+            ].map(([label, email]) => (
+              <div key={email}>
+                <dt className="font-semibold text-neutral-950 dark:text-neutral-50">
+                  {label}
+                </dt>
+                <dd>
+                  <Link
+                    href={`mailto:${email}`}
+                    className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-950"
+                  >
+                    {email}
+                  </Link>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </Border>
+
+        <Border className="mt-16 pt-16">
+          <h2 className="font-display text-base font-semibold text-neutral-950 dark:text-neutral-50">
+            Follow us
+          </h2>
+          <SocialMedia className="mt-6" />
+        </Border>
+      </FadeIn>
+    );
+  }
+
+  return (
+    <Layout title="Contact" description="Contact Betalectic">
+      <div className="w-full mx-auto">
+        <PageIntro eyebrow="Contact us" title="Let’s work together">
+          <p>We can’t wait to hear from you.</p>
+        </PageIntro>
+        <Container className="mt-24 sm:mt-32 lg:mt-40">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
+            <ContactForm />
+            <ContactDetails />
           </div>
-        </div>
+        </Container>
       </div>
     </Layout>
   );
