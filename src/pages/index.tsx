@@ -200,7 +200,7 @@ function Services() {
       <SectionIntro
         eyebrow="Services"
         title="We help you identify, explore and respond to new opportunities."
-        className="mt-24 sm:mt-32 lg:mt-40 text-neutral-900 dark:text-neutral-50"
+        className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p className="text-neutral-700 dark:text-neutral-300">
           As long as those opportunities involve giving us money to re-purpose
