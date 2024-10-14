@@ -19,7 +19,6 @@ const navigation = [
     title: <p className="text-neutral-950 dark:text-neutral-50">Company</p>,
     links: [
       { title: "About", href: "/about" },
-      { title: "Blog", href: "/blog" },
       { title: "Contact us", href: "/contact" },
     ],
   },
