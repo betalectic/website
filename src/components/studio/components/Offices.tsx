@@ -1,44 +1,44 @@
-import clsx from 'clsx'
+import clsx from "clsx";
 
 function Office({
   name,
   children,
   invert = false,
 }: {
-  name: string
-  children: React.ReactNode
-  invert?: boolean
+  name: string;
+  children: React.ReactNode;
+  invert?: boolean;
 }) {
   return (
     <address
       className={clsx(
-        'text-sm not-italic',
-        invert ? 'text-neutral-300' : 'text-neutral-600',
+        "text-sm not-italic",
+        invert ? "text-neutral-300" : "text-neutral-600"
       )}
     >
-      <strong className={invert ? 'text-white' : 'text-neutral-950'}>
+      <strong className={invert ? "text-white" : "text-neutral-950"}>
         {name}
       </strong>
       <br />
       {children}
     </address>
-  )
+  );
 }
 
 export function Offices({
   invert = false,
   ...props
-}: React.ComponentPropsWithoutRef<'ul'> & { invert?: boolean }) {
+}: React.ComponentPropsWithoutRef<"ul"> & { invert?: boolean }) {
   return (
     <ul role="list" {...props}>
-      <li>
+      <li className="list-none">
         <Office name="Copenhagen" invert={invert}>
           1 Carlsberg Gate
           <br />
           1260, København, Denmark
         </Office>
       </li>
-      <li>
+      <li className="list-none">
         <Office name="Billund" invert={invert}>
           24 Lego Allé
           <br />
@@ -46,5 +46,5 @@ export function Offices({
         </Office>
       </li>
     </ul>
-  )
+  );
 }

@@ -8,18 +8,17 @@ import {
   useRef,
   useState,
 } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Link from "@docusaurus/Link";
 import clsx from "clsx";
 import { motion, MotionConfig, useReducedMotion } from "framer-motion";
 
-import { Button } from "@/components/Button";
-import { Container } from "@/components/Container";
-import { Footer } from "@/components/Footer";
-import { GridPattern } from "@/components/GridPattern";
-import { Logo, Logomark } from "@/components/Logo";
-import { Offices } from "@/components/Offices";
-import { SocialMedia } from "@/components/SocialMedia";
+import { Button } from "./Button";
+import { Container } from "./Container";
+import { Footer } from "./Footer";
+import { GridPattern } from "./GridPattern";
+import { Logo, Logomark } from "./Logo";
+import { Offices } from "./Offices";
+import { SocialMedia } from "./SocialMedia";
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean;
@@ -278,12 +277,11 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 }
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
-  let pathname = usePathname();
   let [logoHovered, setLogoHovered] = useState(false);
 
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
-      <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
+      <RootLayoutInner>{children}</RootLayoutInner>
     </RootLayoutContext.Provider>
   );
 }
