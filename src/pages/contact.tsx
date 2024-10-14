@@ -8,8 +8,12 @@ import { Button } from "../components/studio/components/Button";
 import { Border } from "../components/studio/components/Border";
 import { Offices } from "../components/studio/components/Offices";
 import { SocialMedia } from "../components/studio/components/SocialMedia";
+import { motion, MotionConfig, useReducedMotion } from "framer-motion";
+import { GridPattern } from "../components/studio/components/GridPattern";
 
 export default function Contact() {
+  let shouldReduceMotion = useReducedMotion();
+
   function TextInput({
     label,
     ...props
@@ -158,17 +162,31 @@ export default function Contact() {
 
   return (
     <Layout title="Contact" description="Contact Betalectic">
-      <div className="w-full mx-auto">
-        <PageIntro eyebrow="Contact us" title="Let’s work together">
-          <p>We can’t wait to hear from you.</p>
-        </PageIntro>
-        <Container className="mt-24 sm:mt-32 lg:mt-40">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
-            <ContactForm />
-            <ContactDetails />
-          </div>
-        </Container>
-      </div>
+      <MotionConfig
+        transition={shouldReduceMotion ? { duration: 0 } : undefined}
+      >
+        <motion.div layout className="relative isolate flex w-full flex-col">
+          <motion.div layout className="relative isolate flex w-full flex-col">
+            <GridPattern
+              className="absolute inset-x-0 -top-24 -z-10 h-[1000px] w-full fill-neutral-50  stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+              yOffset={-96}
+              interactive
+            />
+
+            <div className="w-full mx-auto">
+              <PageIntro eyebrow="Contact us" title="Let’s work together">
+                <p>We can’t wait to hear from you.</p>
+              </PageIntro>
+              <Container className="mt-24 sm:mt-32 lg:mt-40">
+                <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
+                  <ContactForm />
+                  <ContactDetails />
+                </div>
+              </Container>
+            </div>
+          </motion.div>
+        </motion.div>
+      </MotionConfig>
     </Layout>
   );
 }
