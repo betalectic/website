@@ -9,7 +9,7 @@ type Props = WrapperProps<typeof FooterType>;
 export default function FooterWrapper(props: Props): JSX.Element {
   return (
     <>
-      <div className="bg-neutral-50 dark:bg-neutral-900">
+      <div className="bg-neutral-50 dark:bg-neutral-900 mt-10">
         <NewFooter />
       </div>
       {/* <Footer {...props} /> */}
