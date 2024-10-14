@@ -86,19 +86,19 @@ function CaseStudies({ caseStudies }: any) {
     <>
       <SectionIntro
         title="Harnessing technology for a brighter future"
-        className="mt-24 sm:mt-32 lg:mt-40"
+        className="mt-24 sm:mt-32 lg:mt-40 text-neutral-900 dark:text-neutral-50"
       >
-        <p>
+        <p className="text-neutral-700 dark:text-neutral-300">
           We believe technology is the answer to the world’s greatest
           challenges. It’s also the cause, so we find ourselves in bit of a
           catch 22 situation.
         </p>
       </SectionIntro>
-      <Container className="mt-16">
+      <Container className="my-20">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
             <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+              <article className="relative flex w-full flex-col rounded-3xl p-6 dark:bg-neutral-900 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
                 <h3>
                   <Link href={caseStudy.href}>
                     <span className="absolute inset-0 rounded-3xl" />
@@ -111,7 +111,7 @@ function CaseStudies({ caseStudies }: any) {
                     />
                   </Link>
                 </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
+                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950 dark:text-neutral-50">
                   <time
                     dateTime={caseStudy.date.split("-")[0]}
                     className="font-semibold"
@@ -123,10 +123,10 @@ function CaseStudies({ caseStudies }: any) {
                   </span>
                   <span>Case study</span>
                 </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950 dark:text-neutral-50">
                   {caseStudy.title}
                 </p>
-                <p className="mt-4 text-base text-neutral-600">
+                <p className="mt-4 text-base text-neutral-600 dark:text-neutral-300">
                   {caseStudy.description}
                 </p>
               </article>
@@ -189,6 +189,58 @@ function CaseStudies({ caseStudies }: any) {
 //   );
 // }
 
+const clients = [
+  ["Phobia"],
+  ["Family Fund"],
+  ["Unseal"],
+  ["Mail Smirk"],
+  ["Home Work"],
+  ["Green Life"],
+  ["Bright Path"],
+  ["North Adventures"],
+];
+
+function Clients() {
+  return (
+    <div className="mt-44 rounded-4xl bg-neutral-950 py-20 sm:mt-44 sm:py-32 lg:mt-56">
+      <Container>
+        <FadeIn className="flex items-center gap-x-8">
+          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
+            We’ve worked with hundreds of amazing people
+          </h2>
+          <div className="h-px flex-auto bg-neutral-800" />
+        </FadeIn>
+        <FadeInStagger faster>
+          <ul
+            role="list"
+            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+          >
+            {clients.map(([client]) => (
+              <li key={client} className="list-none">
+                <FadeIn>
+                  <div className="flex">
+                    <img
+                      alt={client}
+                      src={
+                        require("@site/static/img/favicon_betalectic.png")
+                          .default
+                      }
+                      className="w-12 h-12"
+                    />
+                    <p className="my-auto ml-4 text-neutral-50 font-bold">
+                      {client}
+                    </p>
+                  </div>
+                </FadeIn>
+              </li>
+            ))}
+          </ul>
+        </FadeInStagger>
+      </Container>
+    </div>
+  );
+}
+
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   let shouldReduceMotion = useReducedMotion();
@@ -221,23 +273,43 @@ export default function Home(): JSX.Element {
             <main>
               <Container className="mt-12 sm:mt-20 md:mt-40">
                 <FadeIn className="max-w-3xl">
-                  <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 dark:text-gray-50 [text-wrap:balance] sm:text-7xl">
-                    Award-winning development studio based in Denmark.
+                  <h1 className="font-display text-5xl font-bold tracking-tight text-neutral-950 dark:text-gray-50 [text-wrap:balance] sm:text-7xl">
+                    Betalectic
                   </h1>
                   <p className="mt-6 text-xl text-neutral-600 dark:text-neutral-300">
-                    We are a development studio working at the intersection of
-                    design and technology. It’s a really busy intersection
-                    though — a lot of our staff have been involved in hit and
-                    runs.
+                    We are a digital solutions powerhouse, where innovation
+                    meets execution at full speed. At this crossroads of
+                    creativity and technology, we don’t just build software — we
+                    engineer impact. Our team thrives on turning complex
+                    challenges into seamless, tailored solutions that move fast,
+                    scale effortlessly
                   </p>
                 </FadeIn>
               </Container>
+
+              <div className="mt-96">
+                <Clients />
+              </div>
 
               <CaseStudies
                 caseStudies={[
                   {
                     href: "/",
                     date: "2023-11-01",
+                    title: "Transforming ideas into digital solutions",
+                    description:
+                      "Where innovation meets execution at full speed. we don’t just build software we engineer impact. Our team thrives on turning complex challenges into seamless, tailored solutions that move fast, scale effortlessly.",
+                  },
+                  {
+                    href: "/",
+                    date: "2024-11-01",
+                    title: "Transforming ideas into digital solutions",
+                    description:
+                      "Where innovation meets execution at full speed. we don’t just build software we engineer impact. Our team thrives on turning complex challenges into seamless, tailored solutions that move fast, scale effortlessly.",
+                  },
+                  {
+                    href: "/",
+                    date: "2025-11-01",
                     title: "Transforming ideas into digital solutions",
                     description:
                       "Where innovation meets execution at full speed. we don’t just build software we engineer impact. Our team thrives on turning complex challenges into seamless, tailored solutions that move fast, scale effortlessly.",
