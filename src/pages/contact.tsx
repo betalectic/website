@@ -100,10 +100,7 @@ export default function Contact() {
               </fieldset>
             </div>
           </div>
-          <Button
-            type="submit"
-            className="mt-10 bg-black text-white dark:bg-white dark:text-black"
-          >
+          <Button type="submit" invert={true} className="mt-10">
             Let’s work together
           </Button>
         </form>
@@ -129,10 +126,7 @@ export default function Contact() {
             Email us
           </h2>
           <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
-            {[
-              ["Careers", "careers@studioagency.com"],
-              ["Press", "press@studioagency.com"],
-            ].map(([label, email]) => (
+            {[["Contact", "contact@betalectic.com"]].map(([label, email]) => (
               <div key={email}>
                 <dt className="font-semibold text-neutral-950 dark:text-neutral-50">
                   {label}

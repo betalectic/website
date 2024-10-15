@@ -14,14 +14,14 @@ function Office({
       className={clsx(
         "text-sm not-italic",
         invert
-          ? "text-neutral-300 dark:text-neutral-600"
+          ? "text-neutral-300 dark:text-neutral-300"
           : "text-neutral-600 dark:text-neutral-300"
       )}
     >
       <strong
         className={
           invert
-            ? "text-white dark:text-neutral-950"
+            ? "text-white dark:text-neutral-50"
             : "text-neutral-950 dark:text-neutral-50"
         }
       >
@@ -40,17 +40,11 @@ export function Offices({
   return (
     <ul role="list" {...props}>
       <li className="list-none">
-        <Office name="Copenhagen" invert={invert}>
-          1 Carlsberg Gate
+        <Office name="Hyderabad" invert={invert}>
+          3rd Floor, Mitti’s Building, Near Divyashree Lanco Hills, Chaitanya
+          Enclave
           <br />
-          1260, København, Denmark
-        </Office>
-      </li>
-      <li className="list-none">
-        <Office name="Billund" invert={invert}>
-          24 Lego Allé
-          <br />
-          7190, Billund, Denmark
+          Manikonda, Hyderabad, Telangana - 500089
         </Office>
       </li>
     </ul>

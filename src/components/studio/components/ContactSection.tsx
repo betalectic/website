@@ -13,7 +13,11 @@ export function ContactSection() {
               Tell us about your project
             </h2>
             <div className="mt-6 flex">
-              <Button className="bg-white" href="/contact">
+              <Button
+                invert={false}
+                className="bg-white text-black"
+                href="/contact"
+              >
                 Say Hej
               </Button>
             </div>
