@@ -87,6 +87,38 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
+    metadata: [
+      {
+        name: "keywords",
+        content: "betalectic, documentation, tech blog, mutual fund",
+      },
+      { property: "og:title", content: "Betalectic" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://betalectic.github.io/" },
+      {
+        property: "og:image",
+        content: "https://betalectic.github.io/img/betalectic_logo.png",
+      },
+      {
+        property: "og:description",
+        content:
+          "We are a digital solutions powerhouse, where innovation meets execution at full speed. At this crossroads of creativity and technology.",
+      },
+      { property: "og:site_name", content: "Betalectic" },
+      { property: "og:locale", content: "en_US" },
+      { name: "twitter:card", content: "https://betalectic.github.io/" },
+      { name: "twitter:title", content: "Betalectic" },
+      {
+        name: "twitter:description",
+        content:
+          "We are a digital solutions powerhouse, where innovation meets execution at full speed. At this crossroads of creativity and technology.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://betalectic.github.io/img/betalectic_logo.png",
+      },
+      { name: "twitter:site", content: "@betalectic" },
+    ],
     image: "img/betalectic_logo.png",
     navbar: {
       hideOnScroll: true,
