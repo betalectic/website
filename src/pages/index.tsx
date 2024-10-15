@@ -37,6 +37,7 @@ function CaseStudies({ caseStudies }: any) {
                   <Link href={caseStudy.href}>
                     <span className="absolute inset-0 rounded-3xl" />
                     <img
+                      alt="Betalectic Logo"
                       src={
                         require("@site/static/img/favicon_betalectic.png")
                           .default

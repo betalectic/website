@@ -34,7 +34,7 @@ export function StylizedImage({ shape = 0, className, ...props }) {
         <g clipPath={`url(#${id}-clip)`} className="group">
           <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
             <foreignObject width={width} height={height}>
-              <img className="w-full" alt="" {...props} />
+              <img className="w-full" alt="Betalectic Logo" {...props} />
             </foreignObject>
           </g>
           <use

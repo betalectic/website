@@ -71,6 +71,7 @@ export function Logo({
     // </svg>
     <div className="flex">
       <img
+        alt="Betalectic logo"
         src={require("@site/static/img/favicon_betalectic.png").default}
         className="w-12 h-12"
       />

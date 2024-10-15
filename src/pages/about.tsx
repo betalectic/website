@@ -172,7 +172,7 @@ export default function About() {
                           <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
                             <img
                               {...person.image}
-                              alt=""
+                              alt={person.name}
                               className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
                             />
 
