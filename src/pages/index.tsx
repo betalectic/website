@@ -1,16 +1,11 @@
 import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
-// import { GridPattern } from "../components/GridPattern";
-// GridPattern;
 import { List, ListItem } from "../components/studio/components/List";
 import { StylizedImage } from "../components/studio/components/StylizedImage";
 import { motion, MotionConfig, useReducedMotion } from "framer-motion";
 import { Container } from "../components/studio/components/Container";
 import { FadeIn, FadeInStagger } from "../components/studio/components/FadeIn";
 import { SectionIntro } from "../components/studio/components/SectionIntro";
-import { title } from "framer-motion/client";
 import { GridPattern } from "../components/studio/components/GridPattern";
 import { Testimonial } from "../components/studio/components/Testimonial";
 import { ContactSection } from "../components/studio/components/ContactSection";
@@ -97,7 +92,7 @@ function Clients() {
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 p-0 lg:grid-cols-4"
           >
             {clients.map(([client]) => (
               <li key={client} className="list-none">
@@ -141,15 +136,15 @@ function Services() {
       <Container className="mt-16">
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-            <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+            <FadeIn className="w-[26.75rem] flex-none lg:w-[45rem]">
               <StylizedImage
-                src={require("@site/static/img/favicon_betalectic.png").default}
+                src={require("../images/laptop.jpg").default}
                 sizes="(min-width: 1024px) 41rem, 31rem"
                 className="justify-center lg:justify-end"
               />
             </FadeIn>
           </div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] text-neutral-700 dark:text-neutral-300 lg:pl-4 list-none">
+          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] text-neutral-700 dark:text-neutral-300 lg:pl-4 pl-0 list-none">
             <ListItem title="Web development">
               We specialise in crafting beautiful, high quality marketing pages.
               The rest of the website will be a shell that uses lorem ipsum
@@ -185,8 +180,6 @@ export default function Home(): JSX.Element {
       description="We are a digital solutions powerhouse, where innovation meets execution at full speed. At this crossroads of creativity and technology, "
       wrapperClassName="rajiv"
     >
-      {/* <HomepageHeader /> */}
-
       <MotionConfig
         transition={shouldReduceMotion ? { duration: 0 } : undefined}
       >

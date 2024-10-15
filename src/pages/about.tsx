@@ -164,7 +164,7 @@ export default function About() {
                 <div className="lg:col-span-3">
                   <ul
                     role="list"
-                    className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
+                    className="grid grid-cols-1 gap-6 sm:grid-cols-2 p-0 lg:grid-cols-3 xl:gap-8"
                   >
                     {group.people.map((person) => (
                       <li key={person.name} className="list-none">
