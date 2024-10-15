@@ -106,7 +106,7 @@ const config: Config = {
       },
       { property: "og:site_name", content: "Betalectic" },
       { property: "og:locale", content: "en_US" },
-      { name: "twitter:card", content: "https://betalectic.github.io/" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Betalectic" },
       {
         name: "twitter:description",
