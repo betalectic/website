@@ -101,7 +101,11 @@ export default function Contact() {
               </fieldset>
             </div>
           </div>
-          <Button type="submit" invert={true} className="mt-10">
+          <Button
+            type="submit"
+            invert={true}
+            className="mt-10 hover:bg-neutral-600"
+          >
             Let’s work together
           </Button>
         </form>

@@ -15,7 +15,7 @@ export function ContactSection() {
             <div className="mt-6 flex">
               <Button
                 invert={false}
-                className="bg-white text-black"
+                className="bg-white text-black hover:bg-neutral-300"
                 href="/contact"
               >
                 Say Hej
