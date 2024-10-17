@@ -43,6 +43,10 @@ const config: Config = {
       {
         docs: false,
         blog: {
+          routeBasePath: "/blog-docusaurus",
+          // blogSidebarCount: 0,
+          blogTitle: "Blog",
+          blogDescription: "Blog content from Betalectic",
           showReadingTime: true,
           feedOptions: {
             type: ["rss", "atom"],
@@ -128,6 +132,8 @@ const config: Config = {
         href: "/",
       },
       items: [
+        { to: "/blog-page", label: "Blog Studio", position: "right" },
+        { to: "/blog-docusaurus", label: "Blog Docusaurus", position: "right" },
         { to: "/about", label: "About Us", position: "right" },
         { to: "/contact", label: "Contact", position: "right" },
       ],
