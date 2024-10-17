@@ -3,7 +3,13 @@ import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.html", "./src/**/*.js", "./src/**/*.tsx"],
+  content: [
+    "./src/**/*.html",
+    "./src/**/*.js",
+    "./src/**/*.tsx",
+    "./blog/**/*.mdx",
+    "./blog/**/*.md",
+  ],
   corePlugins: { preflight: false },
   // important: "#tailwind_preflight",
   darkMode: ["class", '[data-theme="dark"]'],

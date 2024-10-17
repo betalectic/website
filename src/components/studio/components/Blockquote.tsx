@@ -1,21 +1,9 @@
-import Image, { type ImageProps } from "next/image";
+// import Image from 'next/image'
 import clsx from "clsx";
 
 import { Border } from "./Border";
 
-type ImagePropsWithOptionalAlt = Omit<ImageProps, "alt"> & { alt?: string };
-
-function BlockquoteWithImage({
-  author,
-  children,
-  className,
-  image,
-}: {
-  author: { name: string; role: string };
-  children: React.ReactNode;
-  className?: string;
-  image: ImagePropsWithOptionalAlt;
-}) {
+function BlockquoteWithImage({ author, children, className, image }) {
   return (
     <figure
       className={clsx(
@@ -27,9 +15,15 @@ function BlockquoteWithImage({
         {typeof children === "string" ? <p>{children}</p> : children}
       </blockquote>
       <div className="col-start-1 row-start-2 overflow-hidden rounded-xl bg-neutral-100 sm:col-span-5 sm:row-span-full sm:rounded-3xl">
-        <Image
+        {/* <Image
           alt=""
           {...image}
+          sizes="(min-width: 1024px) 17.625rem, (min-width: 768px) 16rem, (min-width: 640px) 40vw, 3rem"
+          className="h-12 w-12 object-cover grayscale sm:aspect-[7/9] sm:h-auto sm:w-full"
+        /> */}
+        <img
+          {...image}
+          alt=""
           sizes="(min-width: 1024px) 17.625rem, (min-width: 768px) 16rem, (min-width: 640px) 40vw, 3rem"
           className="h-12 w-12 object-cover grayscale sm:aspect-[7/9] sm:h-auto sm:w-full"
         />
@@ -44,15 +38,7 @@ function BlockquoteWithImage({
   );
 }
 
-function BlockquoteWithoutImage({
-  author,
-  children,
-  className,
-}: {
-  author: { name: string; role: string };
-  children: React.ReactNode;
-  className?: string;
-}) {
+function BlockquoteWithoutImage({ author, children, className }) {
   return (
     <Border position="left" className={clsx("pl-8", className)}>
       <figure className="text-sm">
@@ -67,13 +53,7 @@ function BlockquoteWithoutImage({
   );
 }
 
-export function Blockquote(
-  props:
-    | React.ComponentPropsWithoutRef<typeof BlockquoteWithImage>
-    | (React.ComponentPropsWithoutRef<typeof BlockquoteWithoutImage> & {
-        image?: undefined;
-      })
-) {
+export function Blockquote(props) {
   if (props.image) {
     return <BlockquoteWithImage {...props} />;
   }
