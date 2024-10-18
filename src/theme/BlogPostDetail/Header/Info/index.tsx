@@ -54,11 +54,12 @@ function Spacer() {
   return <>{" · "}</>;
 }
 
-export default function BlogPostItemHeaderInfo({
+export default function BlogPostDetailHeaderInfo({
   className,
 }: Props): JSX.Element {
   const { metadata } = useBlogPost();
   const { date, readingTime } = metadata;
+  console.log("metadata in Detail", metadata);
 
   const dateTimeFormat = useDateTimeFormat({
     day: "numeric",
@@ -72,13 +73,24 @@ export default function BlogPostItemHeaderInfo({
 
   return (
     <div className={clsx(styles.container, "", className)}>
-      <DateTime date={date} formattedDate={formatDate(date)} />
-      {typeof readingTime !== "undefined" && (
-        <>
-          <Spacer />
-          <ReadingTime readingTime={readingTime} />
-        </>
-      )}
+      <header className="mx-auto flex max-w-5xl flex-col text-center">
+        <h1 className="mt-6 font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl">
+          {metadata.title}
+        </h1>
+        <time
+          dateTime={metadata.date}
+          className="order-first text-sm text-neutral-950"
+        >
+          {formatDate(metadata.date)}
+        </time>
+        <p className="mt-6 text-sm font-semibold text-neutral-950">
+          by{" "}
+          {metadata.authors
+            .map((author) => `${author.name}, ${author.title}`)
+            .join(", ")}
+          {/* by {metadata.author.name}, {eme.author.role} */}
+        </p>
+      </header>
     </div>
   );
 }

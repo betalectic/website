@@ -15,8 +15,6 @@ import BlogPostItemFooter from "@theme/BlogPostItem/Footer";
 import type { Props } from "@theme/BlogPostItem";
 import { FadeIn } from "@site/src/components/studio/components/FadeIn";
 import { Border } from "@site/src/components/studio/components/Border";
-import BlogPostDetailContainer from "../BlogPostDetail/Container";
-import BlogPostDetailHeader from "../BlogPostDetail/Header";
 
 // apply a bottom margin in list view
 function useContainerClassName() {
@@ -40,11 +38,7 @@ export default function BlogPostItem({
     <FadeIn>
       {isBlogPostPage ? (
         <>
-          <Border showBorder={!isBlogPostPage} className={`pt-10`}>
-            <BlogPostDetailContainer>
-              <BlogPostDetailHeader children={children} />
-            </BlogPostDetailContainer>
-          </Border>
+          <h1>Blog Post</h1>
         </>
       ) : (
         <>
