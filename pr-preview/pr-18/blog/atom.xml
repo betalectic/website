@@ -13,7 +13,15 @@
         <link href="https://betalectic.github.io/pr-preview/pr-18/blog/test-blog-studio"/>
         <updated>2024-10-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Here is the summary of a very new Studio Blog,]]></summary>
-        <content type="html"><![CDATA[<p>Here is the summary of a very new Studio Blog,</p>]]></content>
+        <content type="html"><![CDATA[<p>Here is the summary of a very new Studio Blog,</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="step-1-of-your-journey">Step 1 of your journey<a href="https://betalectic.github.io/pr-preview/pr-18/blog/test-blog-studio#step-1-of-your-journey" class="hash-link" aria-label="Direct link to Step 1 of your journey" title="Direct link to Step 1 of your journey">​</a></h2>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="step-2-of-your-journey">Step 2 of your journey<a href="https://betalectic.github.io/pr-preview/pr-18/blog/test-blog-studio#step-2-of-your-journey" class="hash-link" aria-label="Direct link to Step 2 of your journey" title="Direct link to Step 2 of your journey">​</a></h2>
+<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="step-3-of-your-journey">Step 3 of your journey<a href="https://betalectic.github.io/pr-preview/pr-18/blog/test-blog-studio#step-3-of-your-journey" class="hash-link" aria-label="Direct link to Step 3 of your journey" title="Direct link to Step 3 of your journey">​</a></h2>
+<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="step-4-of-your-journey">Step 4 of your journey<a href="https://betalectic.github.io/pr-preview/pr-18/blog/test-blog-studio#step-4-of-your-journey" class="hash-link" aria-label="Direct link to Step 4 of your journey" title="Direct link to Step 4 of your journey">​</a></h2>
+<p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose</p>]]></content>
         <author>
             <name>Abhishek</name>
             <uri>https://github.com/abhishekdas</uri>
@@ -29,6 +37,7 @@
         <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
         <content type="html"><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p>
 <p>Here are a few tips you might find useful.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="create-your-first-react-page">Create your first React Page<a href="https://betalectic.github.io/pr-preview/pr-18/blog/welcome#create-your-first-react-page" class="hash-link" aria-label="Direct link to Create your first React Page" title="Direct link to Create your first React Page">​</a></h2>
 <p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
 <p>Regular blog authors can be added to <code>authors.yml</code>.</p>
 <p>The blog post date can be extracted from filenames, such as:</p>
@@ -36,6 +45,7 @@
 <li><code>2019-05-30-welcome.md</code></li>
 <li><code>2019-05-30-welcome/index.md</code></li>
 </ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="create-your-second-react-page">Create your second React Page<a href="https://betalectic.github.io/pr-preview/pr-18/blog/welcome#create-your-second-react-page" class="hash-link" aria-label="Direct link to Create your second React Page" title="Direct link to Create your second React Page">​</a></h2>
 <p>A blog post folder can be convenient to co-locate blog post images:</p>
 <p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://betalectic.github.io/pr-preview/pr-18/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>
 <p>The blog supports tags as well!</p>
