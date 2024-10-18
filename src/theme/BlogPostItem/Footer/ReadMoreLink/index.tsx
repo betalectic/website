@@ -12,7 +12,7 @@ import type { Props } from "@theme/BlogPostItem/Footer/ReadMoreLink";
 
 function ReadMoreLabel() {
   return (
-    <b className="">
+    <b className="text-white">
       <Translate
         id="theme.blog.post.readMore"
         description="The label used in blog post item excerpts to link to full blog posts"
@@ -29,7 +29,7 @@ export default function BlogPostItemFooterReadMoreLink(
   const { blogPostTitle, ...linkProps } = props;
   return (
     <Link
-      className=""
+      className="bg-neutral-950 m-3 hover:bg-neutral-600 font-semi-bold py-2 px-4 rounded"
       aria-label={translate(
         {
           message: "Read more about {title}",
