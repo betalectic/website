@@ -4,10 +4,20 @@
         <title>Betalectic Blog</title>
         <link>https://betalectic.github.io/pr-preview/pr-17/blog</link>
         <description>Betalectic Blog</description>
-        <lastBuildDate>Thu, 26 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 18 Oct 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Test Blog Studio]]></title>
+            <link>https://betalectic.github.io/pr-preview/pr-17/blog/test-blog-studio</link>
+            <guid>https://betalectic.github.io/pr-preview/pr-17/blog/test-blog-studio</guid>
+            <pubDate>Fri, 18 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is the summary of a very new Studio Blog,]]></description>
+            <content:encoded><![CDATA[<p>Here is the summary of a very new Studio Blog,</p>]]></content:encoded>
+            <category>Hello</category>
+            <category>Docusaurus</category>
+        </item>
         <item>
             <title><![CDATA[Welcome]]></title>
             <link>https://betalectic.github.io/pr-preview/pr-17/blog/welcome</link>
