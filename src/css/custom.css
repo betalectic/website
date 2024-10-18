@@ -84,6 +84,14 @@ a:hover {
   text-decoration: none;
 }
 
+article footer a b {
+  background: #000;
+  padding: 8px 12px;
+  color: white;
+  font-size: 14px;
+  border-radius: 15px;
+}
+
 /* 
 .navbar {
   @apply md:shadow-none md:bg-transparent md:absolute md:left-0 md:right-0 md:top-2 md:z-40 md:pt-14;
