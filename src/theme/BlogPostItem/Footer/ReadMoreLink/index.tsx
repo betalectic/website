@@ -29,7 +29,7 @@ export default function BlogPostItemFooterReadMoreLink(
   const { blogPostTitle, ...linkProps } = props;
   return (
     <Link
-      className="bg-neutral-950 m-3 hover:bg-neutral-600 font-semi-bold py-2 px-4 rounded"
+      className="bg-neutral-950 m-3 hover:bg-neutral-600 font-semi-bold py-2 px-4 rounded-3xl"
       aria-label={translate(
         {
           message: "Read more about {title}",
